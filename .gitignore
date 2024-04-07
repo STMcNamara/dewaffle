@@ -160,3 +160,9 @@ cython_debug/
 #.idea/
 /.idea/workspace.xml
 /.idea/misc.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/.gitignore
+/.idea/dewaffle.iml
+/.idea/modules.xml
+/dewaffle-api/poetry.lock
+/.idea/vcs.xml
