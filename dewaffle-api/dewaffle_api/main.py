@@ -1,3 +1,4 @@
+import uvicorn
 from fastapi import FastAPI
 
 from dewaffle_api.schema import Recipe, RecipeURL, Ingredient, UnitsEnum
@@ -17,7 +18,7 @@ async def from_url(
     place_holder_recipe: Recipe = Recipe(
         name='placeholder_name',
         origin_url=url,
-        ingredients= [Ingredient(
+        ingredients=[Ingredient(
             name="Flour",
             quantity="2",
             units=UnitsEnum.GRAMS
@@ -25,3 +26,8 @@ async def from_url(
         steps=["1. Start", "N. Finish"]
     )
     return place_holder_recipe
+
+
+def start():
+    """Launch from root folder"""
+    uvicorn.run("dewaffle_api.main:app")

@@ -11,6 +11,9 @@ fastapi = "^0.110.1"
 uvicorn = "^0.29.0"
 pydantic = "^2.6.4"
 
+[tool.poetry.scripts]
+start = "dewaffle_api.main:start"
+
 
 [build-system]
 requires = ["poetry-core"]
