@@ -15,14 +15,34 @@ Install required python packages by running the following command in the same lo
 
 # Run
 ## Local
-To start the API, set the working directory to:
-
+To **manually** start the API, set the working directory to:
 > "/dewaffle-api/dewaffle-api"
 
 Activate the environment:
-
 > "poetry shell"
 
 Launch  web server with default local host settings
-
 > "uvicorn main:app --reload"
+
+Alternatively, use the **poetry script**:
+
+Set the working directory to:
+> "/dewaffle-api/"
+
+Run the script:
+> "poetry run start"
+
+# Test
+Testing is implements using Pytest.
+## Local
+To **manually** run all tests, set the working directory to:
+> "/dewaffle-api"
+
+Activate the environment:
+> "poetry shell"
+
+Run all tests with the command:
+> "pytest"
+
+Alternatively use the **poetry script**:
+> "poetry run pytest"
