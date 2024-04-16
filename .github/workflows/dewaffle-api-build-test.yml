@@ -33,4 +33,5 @@ jobs:
         poetry install
     - name: Test with pytest
       run: |
+        cd ./dewaffle-api/
         poetry run pytest
