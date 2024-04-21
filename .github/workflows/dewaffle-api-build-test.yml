@@ -27,14 +27,17 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install Poetry
-    - name: Install Dependancies
+    - name: Install Dependencies
       run: |
         cd ./dewaffle-api/
         poetry install
     - name: Check Formatting
       run: |
         cd ./dewaffle-api
-        poetry run python -m black . --check
+        poetry run flake8 . 
+        poetry run black . --check
+        poetry run isort . --check
+
     - name: Test with pytest
       run: |
         cd ./dewaffle-api/
