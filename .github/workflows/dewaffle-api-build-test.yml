@@ -31,6 +31,10 @@ jobs:
       run: |
         cd ./dewaffle-api/
         poetry install
+    - name: Check Formatting
+      run: |
+        cd ./dewaffle-api
+        poetry run python -m black . --check
     - name: Test with pytest
       run: |
         cd ./dewaffle-api/
