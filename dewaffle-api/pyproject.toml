@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "dewaffle-api"
+name = "app"
 version = "0.1.0"
 description = ""
 authors = ["Sean McNamara <stmcnamara26@gmail.com>"]
@@ -13,7 +13,7 @@ pydantic = "^2.6.4"
 
 
 [tool.poetry.scripts]
-start = "dewaffle_api.main:start"
+start = "app.main:start"
 
 
 [tool.poetry.group.dev.dependencies]
