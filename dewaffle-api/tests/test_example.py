@@ -1,6 +1,6 @@
 import pytest
 
-from app.main import from_url
+from app.api.v0.endpoints.recipies import from_url
 from app.schema import RecipeURL
 
 pytest_plugins = "pytest_asyncio"
