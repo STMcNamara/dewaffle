@@ -1,5 +1,6 @@
 import uvicorn
 from fastapi import FastAPI
+
 from app.api.v0.api import router as api_router
 
 app = FastAPI()
@@ -15,4 +16,4 @@ def start():
     uvicorn.run("app.main:app")
 
 
-app.include_router(api_router, prefix='/api/v0')
+app.include_router(api_router, prefix="/api/v0")
