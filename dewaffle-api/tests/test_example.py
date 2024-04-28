@@ -1,7 +1,7 @@
 import pytest
 
-from dewaffle_api.main import from_url
-from dewaffle_api.schema import RecipeURL
+from app.api.v0.endpoints.recipies import from_url
+from app.schema import RecipeURL
 
 pytest_plugins = "pytest_asyncio"
 
