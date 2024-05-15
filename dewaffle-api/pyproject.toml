@@ -15,6 +15,7 @@ mangum = "^0.17.0"
 
 [tool.poetry.scripts]
 start = "app.main:start"
+start_docker = "app.main:start_docker"
 
 
 [tool.poetry.group.dev.dependencies]
