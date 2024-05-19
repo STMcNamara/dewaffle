@@ -16,9 +16,10 @@ def start():
     """Launch from root folder on local host."""
     uvicorn.run("app.main:app")
 
+
 def start_docker():
     """Use for running inside container to access incoming requests."""
-    uvicorn.run("app.main:app", host='0.0.0.0')
+    uvicorn.run("app.main:app", host="0.0.0.0")
 
 
 app.include_router(api_router, prefix="/api/v0")
