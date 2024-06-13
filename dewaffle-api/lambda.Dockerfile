@@ -1,11 +1,11 @@
-FROM python
+FROM public.ecr.aws/lambda/python:3.12
 
 RUN pip install poetry
 
-WORKDIR /src
+WORKDIR ${LAMBDA_TASK_ROOT}
 
-COPY ./pyproject.toml /src/pyproject.toml
-COPY ./app /src/app
+COPY ./pyproject.toml ${LAMBDA_TASK_ROOT}
+COPY ./app ${LAMBDA_TASK_ROOT}/app
 
 RUN poetry config virtualenvs.create false
 RUN poetry install --no-dev
